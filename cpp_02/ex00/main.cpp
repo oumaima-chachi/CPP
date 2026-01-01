@@ -5,7 +5,7 @@ int main(void) {
     Fixed a;
     Fixed b(a);
     Fixed c;
-    a = c + b;
+    a = c = b;
 
     std::cout << a.getRawBits() << std::endl;
     std::cout << b.getRawBits() << std::endl;
