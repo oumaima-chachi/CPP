@@ -1,4 +1,4 @@
-NAME = bureaucrat
+NAME = Bureaucrat
 
 SRC = main.cpp Bureaucrat.cpp
 CXX = c++
@@ -8,12 +8,14 @@ OBJ = $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-	rm -f $(OBJ)	
+	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f  $(NAME)
 
 re: fclean all
+
+.PHONY : all re clean fclean
